@@ -1,12 +1,15 @@
 package it.polito.tdp.artsmia.model;
 
+import java.util.*;
+
 public class Exhibition {
 
-	int id;
-	String department;
-	String title;
-	int beginYear;
-	int endYear;
+	private int id;
+	private String department;
+	private String title;
+	private int beginYear;
+	private int endYear;
+	private List<ArtObject> artobjects;
 
 	public Exhibition(int id, String department, String title, int beginYear, int endYear) {
 		super();
@@ -63,6 +66,14 @@ public class Exhibition {
 		int result = 1;
 		result = prime * result + id;
 		return result;
+	}
+
+	public List<ArtObject> getArtobjects() {
+		return artobjects;
+	}
+
+	public void setArtobjects(List<ArtObject> artobjects) {
+		this.artobjects = artobjects;
 	}
 
 	@Override
